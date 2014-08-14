@@ -1,0 +1,536 @@
+﻿<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+<title>Manual SysConta</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="images/DENES.ico" />
+<link href="css/helper.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/horizontal-centering.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/default.advanced.css" media="screen" rel="stylesheet" type="text/css" />
+
+<script>
+title = new Object();
+desc = new Object();
+links= new Object();
+matched= new Object();
+keywords= new Object();
+found= new Object();
+var temp=0;
+title[0]=48
+keywords[0]=0
+found[0]=0
+
+
+title[1]="Clasificaciones"
+desc[1]="Manual de Usuario - Clasificaciones "
+links[1]="servidor1/HomeDenes/ManualSysConta/catCecosClas.html"
+matched[1]=0
+
+title[2]="Areas"
+desc[2]="Manual de Usuario - Areas "
+links[2]="servidor1/HomeDenes/ManualSysConta/catCecosAreas.html"
+matched[2]=0
+
+title[3]="Departamentos"
+desc[3]="Manual de Usuario - Departamnetos"
+links[3]="servidor1/HomeDenes/ManualSysConta/catCecosDepto.html"
+matched[3]=0
+
+title[4]="Cuentas de Mayor"
+desc[4]="Manual de Usuario - Cuentas de Mayor"
+links[4]="servidor1/HomeDenes/ManualSysConta/catCuentasMayor.html"
+matched[4]=0
+
+title[5]="Cuentas 2° Nivel"
+desc[5]="Manual de Usuario - Cuentas de 2° Nivel"
+links[5]="file:///U:/Octavio/Manual%20SysConta/catCuentasMayor2Niv.html"
+matched[5]=0
+
+title[6]="Cuentas 3° Nivel"
+desc[6]="Manual de Usuario - Cuentas de 3° Nivel"
+links[6]="servidor1/HomeDenes/ManualSysConta/catCuentasMayor3Niv.html"
+matched[6]=0
+
+title[7]="Cuentas Contable"
+desc[7]="Manual de Usuario - Cuentas Contable"
+links[7]="servidor1/HomeDenes/ManualSysConta/catCuentasContables.html"
+matched[7]=0
+
+title[8]="Bancos"
+desc[8]="Manual de Usuario - Bancos"
+links[8]="servidor1/HomeDenes/ManualSysConta/mtoBancos.html"
+matched[8]=0
+
+title[9]="Mtto. Proveedores"
+desc[9]="Manual de Usuario - Mantenimiento de Proveedores"
+links[9]="servidor1/HomeDenes/ManualSysConta/catProv.html"
+matched[9]=0
+
+title[10]="Mtto. Giro Proveedores"
+desc[10]="Manual de Usuario - Mantenimiento Giro de Proveedores"
+links[10]="servidor1/HomeDenes/ManualSysConta/mtoGiroProv.html"
+matched[10]=0
+
+title[11]="Clientes"
+desc[11]="Manual de Usuario - Clientes"
+links[11]="servidor1/HomeDenes/ManualSysConta/mtoClientes.html"
+matched[11]=0
+
+title[12]="Tipo de Cambio"
+desc[12]="Manual de Usuario - Tipo de Cambio"
+links[12]="servidor1/HomeDenes/ManualSysConta/mtoTipoCambio.html"
+matched[12]=0
+
+title[13]="Mantenimiento de Usuarios"
+desc[13]="Manual de Usuario - Mantenimiento de Usuarios"
+links[13]="servidor1/HomeDenes/ManualSysConta/mtoUsuarios.html"
+matched[13]=0
+
+title[14]="Perfiles de Usuario"
+desc[14]="Manual de Usuario - Perfiles de Usuario"
+links[14]="servidor1/HomeDenes/ManualSysConta/PerfilesUsr.html"
+matched[14]=0
+
+title[15]="Reset de Contraseñas"
+desc[15]="Manual de Usuario - Reset de Contraseñas"
+links[15]="servidor1/HomeDenes/ManualSysConta/ResetContra.html"
+matched[15]=0
+
+title[16]="Mantenimiento Tipo de Movimientos"
+desc[16]="Manual de Usuario - Mantenimiento Tipo de Movimientos"
+links[16]="servidor1/HomeDenes/ManualSysConta/ResetContra.htmla.html"
+matched[16]=0
+
+title[17]="Mtto. Activos"
+desc[17]="Manual de Usuario - Mantenimiento de Activos"
+links[17]="servidor1/HomeDenes/ManualSysConta/catActivos.html"
+matched[17]=0
+
+title[18]="Mtto. Impresoras"
+desc[18]="Manual de Usuario - Mantenimiento de Impresoras"
+links[18]="servidor1/HomeDenes/ManualSysConta/mtoImpre.html"
+matched[18]=0
+
+title[19]="Poliza Manual"
+desc[19]="Manual de Usuario - Poliza Manual"
+links[19]="servidor1/HomeDenes/ManualSysConta/PolConta.html"
+matched[19]=0
+
+title[20]="Informe de Polizas por Periodo"
+desc[20]="Manual de Usuario - Informe de Polizas por Periodo"
+links[20]="servidor1/HomeDenes/ManualSysConta/InfPol.html"
+matched[20]=0
+
+title[21]="Estado de Resultado"
+desc[21]="Manual de Usuario - Estado de Resultados"
+links[21]="servidor1/HomeDenes/ManualSysConta/EdoRes.html"
+matched[21]=0
+
+title[22]="Balance General"
+desc[22]="Manual de Usuario - Balance General"
+links[22]="servidor1/HomeDenes/ManualSysConta/BalGen.html"
+matched[22]=0
+
+title[23]="Balance de Comprobacion"
+desc[23]="Manual de Usuario - Balance de Comprobacion"
+links[23]="servidor1/HomeDenes/ManualSysConta/BalComp.html"
+matched[23]=0
+
+title[24]="Depreciacion Contable"
+desc[24]="Manual de Usuario - Depreciacion Contable"
+links[24]="servidor1/HomeDenes/ManualSysConta/DepCon.html"
+matched[24]=0
+
+title[25]="Depreciacion Fiscal"
+desc[25]="Manual de Usuario - Depreciacion Fiscal"
+links[25]="servidor1/HomeDenes/ManualSysConta/DepFis.html"
+matched[25]=0
+
+title[26]="Relacion Saldos"
+desc[26]="Manual de Usuario - Relacion Saldos"
+links[26]="servidor1/HomeDenes/ManualSysConta/RelSaldos.html"
+matched[26]=0
+
+title[27]="Edo. Resultados CECOS"
+desc[27]="Manual de Usuario - Edo. Resultados CECOS"
+links[27]=""
+matched[27]=0
+
+title[28]="Recuperacion de IVA"
+desc[28]="Manual de Usuario - Recuperacion de IVA"
+links[28]=""
+matched[28]=0
+
+title[29]="Informe de IVA"
+desc[29]="Manual de Usuario - Informe de IVA"
+links[29]=""
+matched[29]=0
+
+title[30]="Ajuste Polizas"
+desc[30]="Manual de Usuario - Ajuste Polizas"
+links[30]=""
+matched[30]=0
+
+title[31]="Cierre de Entradas"
+desc[31]="Manual de Usuario - Cierre de Entradas"
+links[31]=""
+matched[31]=0
+
+title[32]="Informe Cierre de Entradas"
+desc[32]="Manual de Usuario - Informe Cierre de Entradas"
+links[32]=""
+matched[32]=0
+
+title[33]="Inicio Ejercicios Contable"
+desc[33]="Manual de Usuario - Inicio Ejercicios Contable"
+links[33]="servidor1/HomeDenes/ManualSysConta/EjeConta.html"
+matched[33]=0
+
+title[34]="Generacion de Saldos Iniciales"
+desc[34]="Manual de Usuario - Generacion de Saldos Iniciales"
+links[34]="servidor1/HomeDenes/ManualSysConta/IniSaldos.html"
+matched[34]=0
+
+title[35]="Generar Polizas Depreciacion"
+desc[35]="Manual de Usuario - Generar Polizas Depreciacion"
+links[35]=""
+matched[35]=0
+
+title[36]="Cierre Ejercicio Mensual"
+desc[36]="Manual de Usuario - Cierre Ejercicio Mensual"
+links[36]="file:///U:/Octavio/Manual%20SysConta/EjeMes.html"
+matched[36]=0
+
+title[37]="Cheques y Transferencias"
+desc[37]="Manual de Usuario - Cheques y Transferencias"
+links[37]="servidor1/HomeDenes/ManualSysConta/PagoProv.html"
+matched[37]=0
+
+title[38]="Transferencias Interbancarias"
+desc[38]="Manual de Usuario - Transferencias Interbancarias"
+links[38]="servidor1/HomeDenes/ManualSysConta/TrasnIn.html"
+matched[38]=0
+
+title[39]="Reporte de Cheques"
+desc[39]="Manual de Usuario - Reporte de Cheques"
+links[39]="servidor1/HomeDenes/ManualSysConta/InfCheq.html"
+matched[39]=0
+
+title[40]="Programacion de Pagos"
+desc[40]="Manual de Usuario - Programacion de Pagos"
+links[40]="servidor1/HomeDenes/ManualSysConta/ProgPagos.html"
+matched[40]=0
+
+title[41]="Informe OC Pendientes de Programacion para Pago"
+desc[41]="Manual de Usuario - Informe OC Pendientes de Programacion para Pago"
+links[41]="servidor1/HomeDenes/ManualSysConta/PendPago.html"
+matched[41]=0
+
+title[42]="Informe Cambio Factura en CR"
+desc[42]="Manual de Usuario - Informe Cambio Factura en CR"
+links[42]="servidor1/HomeDenes/ManualSysConta/InfCamFolio.html"
+matched[42]=0
+
+title[43]="Movimientos a Proveedor"
+desc[43]="Manual de Usuario - Movimientos a Proveedor"
+links[43]="servidor1/HomeDenes/ManualSysConta/InfMovProv.html"
+matched[43]=0
+
+title[44]="Nota de Credito"
+desc[44]="Manual de Usuario - Nota de Credito"
+links[44]=""
+matched[44]=0
+
+title[45]="Login"
+desc[45]="Manual de Usuario - Login"
+links[45]="servidor1/HomeDenes/ManualSysConta/login.html"
+matched[45]=0
+
+title[46]="Botones del Sistema"
+desc[46]="Manual de Usuario - Botones del Sistema"
+links[46]="servidor1/HomeDenes/ManualSysConta/botones.html"
+matched[46]=0
+
+title[47]="Pagina Principal"
+desc[47]="Manual de Usuario - Pagina Principal"
+links[47]="servidor1/HomeDenes/ManualSysConta/PPrin.html"
+matched[47]=0
+
+title[48]="Salida del Sistema"
+desc[48]="Manual de Usuario - Salida del Sistema"
+links[48]="servidor1/HomeDenes/ManualSysConta/logout.html"
+matched[48]=0
+
+
+function search(){
+var skeyword=document.searchengine.keywords.value.toLowerCase();
+var check=1;
+var pos=0;
+var i=0;
+var j=0;
+var  itemp=0;
+var config='';
+
+while (true)
+	{
+	if (skeyword.indexOf("+") == -1 )
+		{
+		keywords[check]=skeyword;
+		break;
+		}
+	pos=skeyword.indexOf("+");
+	if (skeyword !="+")	
+	{
+	keywords[check]=skeyword.substring(0,pos);
+	check++;
+	}
+	else
+	{
+	check--;
+	break;
+	}
+	skeyword=skeyword.substring(pos+1, skeyword.length);	
+	if (skeyword.length ==0)
+		{
+		check--;
+		break;
+		}
+			 
+	}
+
+keywords[0]=check;
+
+for ( i=1; i<=keywords[0];i++)
+	{
+	for (j=1;j<=title[0];j++)
+		{
+		if (title[j].toLowerCase().indexOf(keywords[i]) > -1 )
+			{
+			  matched[j]++;
+			}
+		}	
+	}
+
+for (i=1;i<=title[0];i++)
+{
+	if (matched[i] > 0 )
+		{
+		  found[0]++;
+		  found[found[0]]=i;
+			
+		}	
+}
+
+
+
+for (i=1;i<=found[0]-1;i++)
+	{
+	for(j=i+1;j<=found[0];j++)
+		{
+		if ( matched[found[i]]< matched[found[j]] )
+			{
+			temp= found[j];
+			found[j]=found[i];
+			found[i]=temp;
+			}
+		}
+	}
+
+output = self;
+output.document.write('<html>');
+output.document.write('<head>');
+output.document.write('<script>');
+output.document.write('window.onerror=new Function("return true")');
+output.document.write('<\/script>');
+output.document.write('<title> Resultados de Busqueda </title>');
+output.document.write('</head>');
+output.document.write('<BODY bgcolor=#ffffff  text=#000000  link=#990099 vlink =#339966 >');
+
+output.document.write('<center> <h1> Resultados de Busqueda </h1></center>');    
+output.document.write('<hr>');
+output.document.write(' Letras tecleadas :: '.big() )
+for (i=1;  i<=keywords[0]; i++)
+	{
+	output.document.write( keywords[i].bold() +"   ");
+	}
+output.document.write('<br>');
+
+if (found[0]==0)
+	{
+	//alert(found[0]);
+	output.document.write('<hr>');
+	output.document.write("<b>No hay resultados de esta busqueda </b> <br>");
+	output.document.write("Debes reducir el numero de letras en la busqueda  <br>");
+	}
+else
+	{
+	output.document.write(" <hr> <b> Los resultados de la busqueda son  : </b>  ");
+	output.document.write( found[0] +"  Entrada(s) encontradas  ".italics());
+	output.document.write("<table border=1 width=100%>");
+	for (i=1; i<=found[0];i++)
+		{
+		output.document.write("<tr><td valign=top bgcolor=#9999ff>");
+		output.document.write("<h3>" +i +"</h3>");
+		output.document.write("<td valign=top>");
+		itemp=found[i];
+		output.document.write(desc[itemp].bold() +"<br>" +
+		links[itemp].link(links[itemp])+"<br>");
+		temp= (matched[itemp]/keywords[0])*100
+		output.document.write("<i> Coincidencias de letras  :: " +temp+" %  </i>" );
+		matched[itemp]=0
+		} 
+	found[0]=0;
+	output.document.write("</table>");
+	}
+output.document.write ("<hr>");
+//output.document.write ("<form><center>"); 
+//output.document.write("<center>Hit the refresh button to return to the search<center>");
+//output.document.write ("<input type='button' value='Start Another Search' onClick = 'self.close()'"); 
+//output.document.write ("<center></form>");
+
+output.document.write ("</body></html>"); 
+output.document.close(); 
+}
+</script>
+</head>
+<body class="vimeo-com">
+<img src="images/DENES.png" alt="DENES" style="position: absolute; bottom: 10px; right: 10px;"/> 
+ <img alt="bgd" src="images/bgd.png" id="bgd" /> 
+<div class="wrapper">
+
+	<div class="container">
+		<h1><center>Manual de Usuario Sistema Contabilidad</center></h1>
+
+		<div class="horizontal-centering"><div><div>
+			<ul id="nav" class="dropdown dropdown-horizontal">
+			<!-- <li class="first"><a href="" class="first" style="color: #172322;">*</a></li> -->
+			<li class="first"><a href="../index.asp" class="first">Home Denes</a></li>
+				<li class="dir">Inicio
+				<ul>
+					<li class="first"><a href="login.html">Login</a></li>
+					<li><a href="botones.html">Botones del Sistema</a></li>
+					<li><a href="PPrin.html">Pagina Principal</a></li>
+					<li class="last"><a href="logout.html">Salida del Sistema</a></li>
+				</ul>
+				</li> 
+				<li class="dir">Catalogos
+					<ul>
+						<li class="first"><a href="" class="dir">Cuentas</a>
+							<ul>
+								<li class="first"><a href="" class="dir">CECOS</a>
+									<ul>
+										<li class="first"><a href="catCecosClas.html">Clasificaciones</a></li>
+										<li><a href="catCecosAreas.html">Areas</a></li>
+										<li class="last"><a href="catCecosDepto.html">Departamentos</a></li>
+									</ul>
+								</li>
+								<li><a href="catCuentasMayor.html">Cuentas de Mayor</a></li>
+								<li><a href="catCuentasMayor2Niv.html">Cuentas 2° Nivel</a></li>
+								<li><a href="catCuentasMayor3Niv.html">Cuentas 3° Nivel</a></li>
+								<li class="last"><a href="catCuentasContables.html">Cuentas Contable</a></li>
+							</ul>
+						</li>
+						<li><a href="mtoBancos.html">Bancos</a></li>
+						<li><a href="" class="dir">Proveedores</a>
+							<ul>
+								<li class="first"><a href="catProv.html">Mtto. Proveedores</a></li>
+								<li class="last"><a href="mtoGiroProv.html">Mtto. Giro Proveedores</a></li>
+							</ul>
+						</li>
+						<li><a href="mtoClientes.html">Clientes</a></li>
+						<li><a href="mtoTipoCambio.html">Tipo de Cambio</a></li>
+						<li><a href="" class="dir">Usuarios</a>
+							<ul>
+								<li class="first"><a href="mtoUsuarios.html">Mantenimiento de Usuarios</a></li>
+								<li><a href="PerfilesUsr.html">Perfiles de Usuario</a></li>
+								<li class="last"><a href="ResetContra.html">Reset de Contraseñas</a></li>
+							</ul>
+						</li>
+						<li><a href="mtoTipoMovPoliza.html">Mtto. Tipo Movimientos</a></li>
+						<li><a href="catActivos.html">Mtto. Activos</a></li>
+						<li class="last"><a href="mtoImpre.html">Mtto. Impresoras</a></li>
+					</ul>
+				</li>
+				<li class="dir">Contabilidad
+					<ul>
+						<li class="first"><a href="" class="dir">Informes</a>
+							<ul>
+								<li class="first"><a href="InfPol.html">Informe de Polizas por Periodo</a></li>
+								<li><a href="EdoRes.html">Estado de Resultado</a></li>
+								<li><a href="BalGen.html">Balance General</a></li>
+								<li><a href="BalComp.html">Balance de Comprobacion</a></li>
+								<li><a href="DepCon.html">Depreciacion Contable</a></li>
+								<li><a href="DepFis.html">Depreciacion Fiscal</a></li>
+								<li><a href="RelSaldos.html">Relacion Saldos</a></li>				
+								<li class="last"><a href="">Edo. Resultados CECOS</a></li>
+							</ul>
+						</li>
+						<li><a href="PolConta.html">Poliza Manual</a></li>
+						<li><a href="" class="dir">Movimientos IVA</a>
+							<ul>
+								<li class="first"><a href="">Recuperacion de IVA</a></li>
+								<li class="last"><a href="">Informe de IVA</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="dir">Entrada Ganado y MP</a>
+							<ul>
+								<li class="first"><a href="AjustePolizas.html">Ajuste Polizas</a></li>
+								<li><a href="CierreEntradas.html">Cierre de Entradas</a></li>
+								<li class="last"><a href="InfCierre.html">Informe Cierre de Entradas</a></li>
+							</ul>
+						</li>
+						<li><a href="EjeConta.html">Inicio Ejercicios Contable</a></li>
+						<li><a href="IniSaldos.html">Generacion de Saldos Iniciales</a></li>
+						<li><a href="./">Generar Polizas Depreciacion</a></li>
+						<li class="last"><a href="EjeMes.html">Cierre Ejercicio Mensual</a></li>
+					</ul>
+				</li>
+				<li class="dir">Bancos
+					<ul>
+						<li class="first"><a href="" class="dir">Movimientos Bancos</a>
+							<ul>
+								<li class="first"><a href="PagoProv.html">Cheques y Transferencias</a></li>
+								<li><a href="TrasnIn.html">Transferencias Interbancarias</a></li>
+								<li class="last"><a href="InfCheq.html">Reporte de Cheques</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="dir">Proveedores</a>
+							<ul>
+								<li class="first"><a href="ProgPagos.html">Programacion de Pagos</a></li>
+								<li><a href="PendPago.html">Informe OC Pendientes de Programacion para Pago</a></li>
+								<li><a href="InfCamFolio.html">Informe Cambio Factura en CR</a></li>
+								<li class="last"><a href="InfMovProv.html">Movimientos a Proveedor</a></li>
+							</ul>
+						</li>
+						<li><a href="NotaCredito.html">Nota de Credito</a></li>
+						<li class="last"><a href="MttoMenor.html">Mantenimiento Menor OC</a></li>						
+					</ul>
+				</li>
+				<li><a href="" style="color: #172322;">----</a></li>
+				<li class="dir last">
+					<!-- <form method="post" action="">
+						<fieldset>
+							<label for="search">Buscar:</label>
+							<input type="text" id="search" class="text" value="Buscar!" onfocus="if (this.value == 'Buscar!') this.value = '';" onblur="if (this.value == '') this.value = 'Buscar!';" maxlength="255" />
+							<input type="image" src="images/vimeo.com/btn_search.png" class="button" />
+						</fieldset>
+					</form> -->
+					
+					<form name="searchengine" onsubmit="search()">
+						<center>
+								<input name="keywords" class="text" maxlength="255" type="text" value="Buscar!" onfocus="if (this.value == 'Buscar!') this.value = '';" onblur="if (this.value == '') this.value = 'Buscar!';">
+								<input name="go" value="Buscar" onclick="search()" type="image" src="images/vimeo/btn_search.png" class="button">															
+						</center>
+					</form>					
+				</li>
+			</ul>
+		</div></div></div>
+	</div>
+</div>
+<footer>
+<center><p>Departamento de Desarrollo : Ext. 156</p></center>
+<address>Desarrollo de Engordas Estabuladas S.A.de C.V.</address>
+</footer>
+</body>
+</html>

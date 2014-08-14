@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+<title>Manual SysAlmacen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="css/dropdown/themes/vimeo.com/images/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="images/DENES.ico" />
+<link href="css/helper.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/horizontal-centering.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/default.advanced.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+<script>
+title = new Object();
+desc = new Object();
+links= new Object();
+matched= new Object();
+keywords= new Object();
+found= new Object();
+var temp=0;
+title[0]=13
+keywords[0]=0
+found[0]=0
+
+
+title[1]="Catalago de Proveedores"
+desc[1]="Manual de Usuario - Catalago de Proveedores "
+links[1]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Catalogo%20Proveedores.html"
+matched[1]=0
+
+title[2]="Productos"
+desc[2]="Manual de Usuario - Productos "
+links[2]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Mantenimiento%20Catalago%20de%20Productos.html"
+matched[2]=0
+
+title[3]="Familias"
+desc[3]="Manual de Usuario - Familias"
+links[3]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Mantenimiento%20Familias.html"
+matched[3]=0
+
+title[4]="Subfamilias"
+desc[4]="Manual de Usuario - Subfamilias"
+links[4]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Mantenimiento%20Subfamilias.html"
+matched[4]=0
+
+title[5]="Unidades Medida"
+desc[5]="Manual de Usuario - Unidades Medida"
+links[5]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Mantenimiento%20Unidades%20Medida.html"
+matched[5]=0
+
+title[6]="Mtto.Prorrateo"
+desc[6]="Manual de Usuario - Mtto.Prorrateo"
+links[6]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Mantenimiento%20Prorrateo.html"
+matched[6]=0
+
+title[7]="Perfiles de Usuario"
+desc[7]="Manual de Usuario - Perfiles de Usuario"
+links[7]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Perfiles%20Usuarios.html"
+matched[7]=0
+
+title[8]="Reset Contraseña"
+desc[8]="Manual de Usuario - Reset Contraseña"
+links[8]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Reset%20Contrase%C3%B1a.html"
+matched[8]=0
+
+title[9]="Movimientos de Inventario"
+desc[9]="Manual de Usuario - Movimientos de Inventario"
+links[9]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Movimientos%20de%20Inventario.html"
+matched[9]=0
+
+title[10]="Inventario Teorico"
+desc[10]="Manual de Usuario - Inventario Teorico"
+links[10]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Inventario%20Teorico.html"
+matched[10]=0
+
+title[11]="Informe de Movimientos"
+desc[11]="Manual de Usuario - Informe de Movimientos"
+links[11]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Informe%20de%20Movimientos.html"
+matched[11]=0
+
+title[12]="Informe de Producto en Punto de Reorden"
+desc[12]="Manual de Usuario - Informe de Producto de Punto de Reorden"
+links[12]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Informe%20Punto%20Reorden.html"
+matched[12]=0
+
+title[13]="Existencia de Producto"
+desc[13]="Manual de Usuario - Existencia de Producto"
+links[13]="file:///U:/Octavio/Manual%20SysAlmacen/WordAlmacen/Inventario%20Diario%20de%20Producto.html"
+matched[13]=0
+
+
+
+function search(){
+var skeyword=document.searchengine.keywords.value.toLowerCase();
+var check=1;
+var pos=0;
+var i=0;
+var j=0;
+var  itemp=0;
+var config='';
+
+while (true)
+	{
+	if (skeyword.indexOf("+") == -1 )
+		{
+		keywords[check]=skeyword;
+		break;
+		}
+	pos=skeyword.indexOf("+");
+	if (skeyword !="+")	
+	{
+	keywords[check]=skeyword.substring(0,pos);
+	check++;
+	}
+	else
+	{
+	check--;
+	break;
+	}
+	skeyword=skeyword.substring(pos+1, skeyword.length);	
+	if (skeyword.length ==0)
+		{
+		check--;
+		break;
+		}
+			 
+	}
+
+keywords[0]=check;
+
+for ( i=1; i<=keywords[0];i++)
+	{
+	for (j=1;j<=title[0];j++)
+		{
+		if (title[j].toLowerCase().indexOf(keywords[i]) > -1 )
+			{
+			  matched[j]++;
+			}
+		}	
+	}
+
+for (i=1;i<=title[0];i++)
+{
+	if (matched[i] > 0 )
+		{
+		  found[0]++;
+		  found[found[0]]=i;
+			
+		}	
+}
+
+
+
+for (i=1;i<=found[0]-1;i++)
+	{
+	for(j=i+1;j<=found[0];j++)
+		{
+		if ( matched[found[i]]< matched[found[j]] )
+			{
+			temp= found[j];
+			found[j]=found[i];
+			found[i]=temp;
+			}
+		}
+	}
+
+output = self;
+output.document.write('<html>');
+output.document.write('<head>');
+output.document.write('<script>');
+output.document.write('window.onerror=new Function("return true")');
+output.document.write('<\/script>');
+output.document.write('<title> Resultados de Busqueda </title>');
+output.document.write('</head>');
+output.document.write('<BODY bgcolor=#ffffff  text=#000000  link=#990099 vlink =#339966 >');
+
+output.document.write('<center> <h1> Resultados de Busqueda </h1></center>');    
+output.document.write('<hr>');
+output.document.write(' Letras tecleadas :: '.big() )
+for (i=1;  i<=keywords[0]; i++)
+	{
+	output.document.write( keywords[i].bold() +"   ");
+	}
+output.document.write('<br>');
+
+if (found[0]==0)
+	{
+	//alert(found[0]);
+	output.document.write('<hr>');
+	output.document.write("<b>No hay resultados de esta busqueda </b> <br>");
+	output.document.write("Debes reducir el numero de letras en la busqueda  <br>");
+	}
+else
+	{
+	output.document.write(" <hr> <b> Los resultados de la busqueda son  : </b>  ");
+	output.document.write( found[0] +"  Entrada(s) encontradas  ".italics());
+	output.document.write("<table border=1 width=100%>");
+	for (i=1; i<=found[0];i++)
+		{
+		output.document.write("<tr><td valign=top bgcolor=#9999ff>");
+		output.document.write("<h3>" +i +"</h3>");
+		output.document.write("<td valign=top>");
+		itemp=found[i];
+		output.document.write(desc[itemp].bold() +"<br>" +
+		links[itemp].link(links[itemp])+"<br>");
+		temp= (matched[itemp]/keywords[0])*100
+		output.document.write("<i> Coincidencias de letras  :: " +temp+" %  </i>" );
+		matched[itemp]=0
+		} 
+	found[0]=0;
+	output.document.write("</table>");
+	}
+//output.document.write ('This search was created by   &copy <a href="http:\\dutta.home.ml.org"> Satadip Dutta</a>    1997');
+output.document.write ("<hr>");
+//output.document.write ("<form><center>"); 
+//output.document.write("<center>Hit the refresh button to return to the search<center>");
+//output.document.write ("<input type='button' value='Start Another Search' onClick = 'self.close()'"); 
+//output.document.write ("<center></form>");
+
+output.document.write ("</body></html>"); 
+output.document.close();
+}
+</script>
+</head>
+
+<body class="vimeo-com"  >
+<img src="images/DENES.png" alt="DENES" style="position: absolute; bottom: 10px; right: 10px;"/> 
+ <img alt="bgd" src="images/bgd.png" id="bgd"/>
+<div class="wrapper">
+	<div class="container">
+		
+		<h1><center>Manual de Usuario Sistema Almacen</center></h1>
+		<div class="horizontal-centering"><div><div>
+			<ul id="nav" class="dropdown dropdown-horizontal">
+				<!--<li class="first"><a href="" class="first" style="color: #0f110f;">*</a></li>-->
+				<li class="first"><a href="../index.html" class="first">Home Denes</a></li>			
+				<li class="dir">Inicio
+				<ul>
+					<li class="first"><a href="Login.html">Login</a></li>
+					<li><a href="Botones.html">Botones del Sistema</a></li>
+					<li><a href="Principal.html">Pagina Principal</a></li>
+					<li class="last"><a href="Salida.html">Salida del Sistema</a></li>
+				</ul>
+				</li> 
+				<li class="dir">Catalogos
+				<ul>
+						<li class="first"><a  class="dir">Proveedores</a>
+							<ul>
+								<li class="last"><a href="CatalogoProveedores.html" >Catalogo de Proveedores</a>
+									
+								</li>
+							</ul>
+						</li>
+						<li class="dir">Mantenimiento Productos
+							<ul>
+								<li class="first"><a href="CatalogoProductos.html">Productos</a></li>
+								<li><a href="Familias.html">Familias</a></li>
+								<li><a href="Subfamilias.html">Subfamilias</a></li>
+								<li class="last"><a href="UnidadMedida.html">Unidades de Medida</a></li>
+								</li>
+							</ul>
+						</li>
+						<li class="dir">Prorrateo
+							<ul>
+								<li class="first"><a href="Prorrateo.html">Mantenimiento Prorrateo</a></li>
+								<li class="last"><a href=""></a></li>
+							</ul>
+						</li>
+						<li class="last"><a class="dir"> Usuarios</a>
+							
+							<ul>
+								<li class="first"><a href="PerfilesUsuarios.html">Perfiles de Usuario</a></li>
+								<li class="last"><a href="Reset.html">Reset de Contraseña</a></li>
+							</ul>
+						</li>
+						
+							</ul>
+				</li>
+				<li class="dir">Movimientos
+					<ul>
+						<li class="first"><a href="Movimientos.html">Movimientos de Inventario</a></li>
+						
+						<li class="last"><a href=""></a></li>
+					</ul>
+				</li>
+				<li class="dir">Informes
+					<ul>
+						<li ><a href="InventarioTeorico.html" >Inventario Teorico</a></li>	
+						<li><a href="InformeMovimientos.html" >Informe de Movimientos</a></li>
+						<li><a href="PuntoReorden.html" >Informe de Producto en Punto de Reorden</a></li>
+						<li class="last"><a href="InventarioDiarioProductos.html">Existencias Productos</a></li>
+					</ul>
+					
+				</li>
+				<li class="dir last">
+					<form name="searchengine" onsubmit="search()">
+						<center>
+								<input name="keywords" class="text" maxlength="255" type="text" value="Buscar!" onfocus="if (this.value == 'Buscar!') this.value = '';" onblur="if (this.value == '') this.value = 'Buscar!';">
+								<input name="go" value="Buscar" onclick="search()" type="image" src="images/vimeo.com/btn_search.png" class="button">
+								
+						</center>
+					</form>
+					
+				</li>
+				
+				</ul>
+		</div></div></div>
+	</div>
+</div>
+<footer>
+<center><p>Departamento de Desarrollo : Ext. 156</p></center>
+<address>Desarrollo de Engordas Estabuladas S.A.de C.V.</address>
+</footer>
+</body>
+
+</html>

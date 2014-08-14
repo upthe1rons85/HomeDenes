@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+<title>Manual SysComercial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="images/DENES.ico" /><link href="css/helper.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/horizontal-centering.css" media="all" rel="stylesheet" type="text/css" />
+<link href="css/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/default.advanced.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+<script>
+title = new Object();
+desc = new Object();
+links= new Object();
+matched= new Object();
+keywords= new Object();
+found= new Object();
+var temp=0;
+title[0]=8
+keywords[0]=0
+found[0]=0
+
+
+title[1]="Login"
+desc[1]="Manual de Usuario - Login "
+links[1]="file:///U:/Octavio/Manual%20SysComercial/WordComercial/login.html"
+matched[1]=0
+
+title[2]="Mantenimiento Choferes"
+desc[2]="Manual de Usuario - Mantenimiento Choferes"
+links[2]="file:///U:/Octavio/Manual%20SysComercial/WordComercial/Mantenimiento%20Choferes.html"
+matched[2]=0
+
+title[3]="Mantenimiento Rutas"
+desc[3]="Manual de Usuario - Mantenimiento Rutas"
+links[3]="file:///U:/Octavio/Manual%20SysComercial/WordComercial/Mantenimiento%20Rutas.html"
+matched[3]=0
+
+title[4]="Perfiles Usuario"
+desc[4]="Manual de Usuario - Perfiles Usuario"
+links[4]="file:///U:/Octavio/Manual%20SysComercial/WordComercial/Perfil%20Usuarios.html"
+matched[4]=0
+
+title[5]="Reset COntraseña"
+desc[5]="Manual de Usuario - Reset Contraseña"
+links[5]="file:///U:/Octavio/Manual%20SysComercial/WordComercial/Reset%20Contrasena.html"
+matched[5]=0
+
+title[6]="Mantenimiento Vendedores"
+desc[6]="Manual de Usuario - Mantenimiento Vendedores"
+links[6]="file:///U:/Octavio/Manual%20SysComercial/WordComercial/Mantenimiento%20Vendedores.htm"
+matched[6]=0
+
+title[7]="Registro Fletes"
+desc[7]="Manual de Usuario - Registro Fletes"
+links[7]=""
+matched[7]=0
+
+title[8]="Reporte Fletes"
+desc[8]="Manual de Usuario - Reporte Fletes"
+links[8]="file:///U:/Octavio/Manual%20SysComercial/WordComercial/Reporte%20de%20Fletes.html"
+matched[8]=0
+
+
+
+function search(){
+var skeyword=document.searchengine.keywords.value.toLowerCase();
+var check=1;
+var pos=0;
+var i=0;
+var j=0;
+var  itemp=0;
+var config='';
+
+while (true)
+	{
+	if (skeyword.indexOf("+") == -1 )
+		{
+		keywords[check]=skeyword;
+		break;
+		}
+	pos=skeyword.indexOf("+");
+	if (skeyword !="+")	
+	{
+	keywords[check]=skeyword.substring(0,pos);
+	check++;
+	}
+	else
+	{
+	check--;
+	break;
+	}
+	skeyword=skeyword.substring(pos+1, skeyword.length);	
+	if (skeyword.length ==0)
+		{
+		check--;
+		break;
+		}
+			 
+	}
+
+keywords[0]=check;
+
+for ( i=1; i<=keywords[0];i++)
+	{
+	for (j=1;j<=title[0];j++)
+		{
+		if (title[j].toLowerCase().indexOf(keywords[i]) > -1 )
+			{
+			  matched[j]++;
+			}
+		}	
+	}
+
+for (i=1;i<=title[0];i++)
+{
+	if (matched[i] > 0 )
+		{
+		  found[0]++;
+		  found[found[0]]=i;
+			
+		}	
+}
+
+
+
+for (i=1;i<=found[0]-1;i++)
+	{
+	for(j=i+1;j<=found[0];j++)
+		{
+		if ( matched[found[i]]< matched[found[j]] )
+			{
+			temp= found[j];
+			found[j]=found[i];
+			found[i]=temp;
+			}
+		}
+	}
+
+output = self;
+output.document.write('<html>');
+output.document.write('<head>');
+output.document.write('<script>');
+output.document.write('window.onerror=new Function("return true")');
+output.document.write('<\/script>');
+output.document.write('<title> Resultados de Busqueda </title>');
+output.document.write('</head>');
+output.document.write('<BODY bgcolor=#ffffff  text=#000000  link=#990099 vlink =#339966 >');
+
+output.document.write('<center> <h1> Resultados de Busqueda </h1></center>');    
+output.document.write('<hr>');
+output.document.write(' Letras tecleadas :: '.big() )
+for (i=1;  i<=keywords[0]; i++)
+	{
+	output.document.write( keywords[i].bold() +"   ");
+	}
+output.document.write('<br>');
+
+if (found[0]==0)
+	{
+	//alert(found[0]);
+	output.document.write('<hr>');
+	output.document.write("<b>No hay resultados de esta busqueda </b> <br>");
+	output.document.write("Debes reducir el numero de letras en la busqueda  <br>");
+	}
+else
+	{
+	output.document.write(" <hr> <b> Los resultados de la busqueda son  : </b>  ");
+	output.document.write( found[0] +"  Entrada(s) encontradas  ".italics());
+	output.document.write("<table border=1 width=100%>");
+	for (i=1; i<=found[0];i++)
+		{
+		output.document.write("<tr><td valign=top bgcolor=#9999ff>");
+		output.document.write("<h3>" +i +"</h3>");
+		output.document.write("<td valign=top>");
+		itemp=found[i];
+		output.document.write(desc[itemp].bold() +"<br>" +
+		links[itemp].link(links[itemp])+"<br>");
+		temp= (matched[itemp]/keywords[0])*100
+		output.document.write("<i> Coincidencias de letras  :: " +temp+" %  </i>" );
+		matched[itemp]=0
+		} 
+	found[0]=0;
+	output.document.write("</table>");
+	}
+//output.document.write ('This search was created by   &copy <a href="http:\\dutta.home.ml.org"> Satadip Dutta</a>    1997');
+output.document.write ("<hr>");
+//output.document.write ("<form><center>"); 
+//output.document.write("<center>Hit the refresh button to return to the search<center>");
+//output.document.write ("<input type='button' value='Start Another Search' onClick = 'self.close()'"); 
+//output.document.write ("<center></form>");
+
+output.document.write ("</body></html>"); 
+output.document.close();
+}
+</script>
+
+</head>
+<body class="vimeo-com">
+<img src="images/DENES.png" alt="DENES" style="position: absolute; bottom: 10px; right: 10px;"/> 
+ <img alt="bgd" src="images/bgd.png" id="bgd"/>
+<div class="wrapper">
+
+	<div class="container">
+		
+			<h1><center>Manual de Usuario Sistema Comercial</center></h1>
+		<div class="horizontal-centering"><div><div>
+			<ul id="nav" class="dropdown dropdown-horizontal">
+				<li class="first"><a href="../index.asp" class="first">Home Denes</a></li>			
+				<li class="dir">Inicio
+				<ul>	
+						<li class="first"><a href="WordComercial/login.html"><align="rigth">Login</a></li>
+						<li class="last"><a href="" ></a></li>
+				</ul>	
+				</li>
+				<li class="dir">Catalogos
+				<ul>
+						<li class="first"><a href="WordComercial/Mantenimiento Choferes.html" >Mantenimiento Choferes</a>
+							
+						</li>
+
+						<li><a href="WordComercial/Mantenimiento Rutas.html" >Mantenimiento Rutas</a>
+							
+						</li>
+						
+						<li ><a href="" class="dir">Usuarios</a>
+							<ul>
+								<li class="first"><a href="WordComercial/Perfil Usuarios.html">Perfiles de Usuario</a></li>
+								<li class="last"><a href="WordComercial/Reset Contrasena.html">Reset de Contrasena</a></li>
+							</ul>
+						</li>
+
+						<li class="first"><a href="WordComercial/Mantenimiento Vendedores.htm" >Mantenimiento Vendedores</a>
+							
+						</li>
+
+						<li class="last"><a href="" >Registro Fletes</a>
+							
+						</li>
+					</ul>
+				</li>
+
+
+				<li class="dir">Informes
+					<ul>
+						<li class="first"><a href="WordComercial/Reporte de Fletes.html">Reporte de Fletes</a></li>
+						
+						<li class="last"><a href=""></a></li>
+					</ul>
+				</li>
+				
+				<li class="dir last">
+					<form name="searchengine" onsubmit="search()">
+						<center>
+								<input name="keywords" class="text" maxlength="255" type="text" value="Buscar!" onfocus="if (this.value == 'Buscar!') this.value = '';" onblur="if (this.value == '') this.value = 'Buscar!';">
+								<input name="go" value="Buscar" onclick="search()" type="image" src="images/vimeo/btn_search.png" class="button">	
+								
+						</center>
+					</form>
+					
+				</li>
+			</ul>
+
+		</div></div></div>
+	</div>
+</div>
+<footer>
+<center><p>Departamento de Desarrollo : Ext. 156</p></center>
+<address>Desarrollo de Engordas Estabuladas S.A.de C.V.</address>
+</footer>
+</body>
+</html>

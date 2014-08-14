@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Denes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="images/DENES3.ico" />
+<link href="layout/styles/main.css" rel="stylesheet" type="text/css" media="all">
+<link href="layout/styles/mediaqueries.css" rel="stylesheet" type="text/css" media="all">
+<link type="text/css" rel="stylesheet" href="layout/styles/styles.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.js"></script>
+<script type='text/javascript' src='layout/scripts/menu_jquery.js'></script>
+<script type="text/javascript" src='layout/scripts/imagemapster.js'></script>
+<!--[if lt IE 9]>
+<link href="layout/styles/ie/ie8.css" rel="stylesheet" type="text/css" media="all">
+<script src="layout/scripts/ie/css3-mediaqueries.min.js"></script>
+<script src="layout/scripts/ie/html5shiv.min.js"></script>
+<![endif]-->
+<link href="layout/scripts/responsiveslides.js-v1.53/responsiveslides.css" rel="stylesheet" type="text/css" media="all">
+<STYLE TYPE="text/css">
+p, div {
+ font-family: Arial, Helvetica, Sans Serif;
+ font-size: 12px;
+ font-weight: normal;
+}
+</STYLE>
+</head>
+
+<body class="">
+
+<!-- Encabezado, Correo, Fecha y Hora -->	
+		<div id="header-contact">
+		<table><td><center><span class="icon-envelope"></span> <a href="mailto:ventas@denes.com.mx">ventas@denes.com.mx</a></center></td>
+				<td><center><span class="icon-phone"></span><a href="#"> +81 83-332202</a></center></td>
+				<td><center><span class="icon-time"></span><a href="#"> <script type="text/javascript"> var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
+					var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"); 
+					var f=new Date(); 
+					document.write(diasSemana[f.getDay()] + " " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear()); 
+					</script></a></center></td>
+		</table>	
+		</div> 
+		
+<!-- ################################################################################################ -->
+
+<nav id="topnav">
+<div id='cssmenu'>
+<ul>
+	<li><img src="images/DenesMenu.png" /></li>
+   <li class='active'><a href='index.asp' style="font-size:12px; margin-left:130px;"><span>Inicio</span></a></li>
+   <li><a href='AcercaDe.html' style="font-size:11.5px;"><span>Quienes Somos</span></a></li>
+   <li><a href='Productos.html' style="font-size:11.5px; "><span>Productos</span></a></li>
+   <li><a href='Noticias.html' style="font-size:11.5px;"><span>Noticias</span></a></li>
+    <li><a href='Contacto.html' style="font-size:11.5px; "><span>Contacto</span></a></li>
+    <li class='has-sub' runat="server" id="SoloPersonal"><a href='#' style="font-size:11.5px;"><span>Servicios al Personal</span></a>
+      <ul>
+		  <li><a href='DirTel.asp'><span>Directorio Telefonico</span></a></li>
+		  <li><a href='Cumple.asp'><span>Compleaños del mes</span></a></li>
+		  <li><a href='Comedor.html'><span>Servicio de Comedor</span></a></li>
+		  <li class='has-sub'><a href='#'><span>Manuales de Sistemas</span></a>
+				<ul>
+				   <li><a href='ManualSysConta/ManualSysConta.html'><span>SysConta</span></a></li>
+				   <li><a href='ManualSysAlmacen/ManualSysAlmacen.html'><span>SysAlmacen</span></a></li>
+				   <li class='last'><a href='ManualSysComercial/ManualSysComercial.html'><span>SysComercial</span></a></li>
+				</ul>
+		  </li>
+		  <li class='last'><a href='http://servidor1/Compras/Logon.Asp' target="_blank"><span>Sistema de Compras</span></a></li>
+	  </ul>
+   </li>
+</ul>
+</div>
+</nav>
+		
+		
+<!-- Slider -->		
+		 <div class="rslides_container clear" style="position:absolute; z-index:2;">
+		 <center><img src="images/fondo.png" style="width:100%; height: 327px; left:-25px;" /></center>
+			 <div style="position:absolute; top:-24px; left:120px; z-index:3;">
+				<!-- <img src="images/Denes.png" style="position:absolute; left:-110px; top:24px;" /> -->
+				<ul class="rslides clear" id="rslides">
+					<li><img src="images/slice3.png" alt="" /></li>
+					<li><img src="images/slice4.png" alt="" /></li>
+					<li><img src="images/slice5.png" alt="" /></li>
+				</ul>
+			</div>	
+		</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>		
+
+<!-- ################################################################################################ -->
+
+<!-- Contenido -->
+<div class="wrapper row3">
+  <div id="container">
+ <!-- <center><h1>Contacto</h1></center> -->
+   <div id="contact" class="clear">
+      <div class="one_half first">
+        <h1>Contáctanos</h1>
+        <p>Haznos saber tus dudas, quejas, comentarios o sugerencias</p>
+        <div id="respond">
+         
+          <form class="rnd5" action="#" method="post">
+            <div class="form-input clear">
+              <label class="one_half first" for="author">Nombre <span class="required">*</span><br>
+                <input type="text" name="author" id="author" value="" size="22">
+              </label>
+              <label class="one_half" for="email">E-mail <span class="required">*</span><br>
+                <input type="text" name="email" id="email" value="" size="22">
+              </label>
+            </div>
+            <div class="form-message">
+			<label>Comentario <span class="required">*</span><br>
+              <textarea name="message" id="message" cols="35" rows="10"></textarea>
+			  </label>
+            </div>
+            <p>
+              <input type="submit" value="Enviar">
+              &nbsp;
+              <input type="reset" value="Reset">
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="one_half">
+       <!--  <div class="map push50"><img src="images/img4.jpg" alt=""></div> -->
+	    <center><h1>Como Llegar</h1> </center>
+	   <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.958857407054!2d-100.26944220000001!3d25.705786200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629539e75a28f5%3A0x967d4973a8bb91df!2sDe+Los+Andes+700%2C+Sin+Nombre+de+Colonia+21%2C+Monterrey%2C+NL!5e0!3m2!1ses!2smx!4v1405085791229" width="400" height="200" frameborder="0" style="border:0"></iframe></center>
+        <section class="contact_details clear">
+          <br>       
+           <center><b>Desarrollo de Engordas Estabuladas S.A. de C.V.</b><center><br>
+          <div class="one_half first">
+            <address>
+            De Los Andes #700, Col. Coyoacan<br>
+            Monterrey, N.L.  C.P.64510<br><br>
+			Conmutador: 52+(81) 83-332202<br> 
+			Ventas Carne: 52+(81) 12-576000<br>
+			Ventas Huevo: 52+(81) 83-514533<br>
+			Fax: 14-770163
+            </address>
+          </div>
+          <div class="one_half">
+            <ul class="list none">
+              <li>Email Ventas:<br><a href="mailto:ventas@denes.com.mx">ventas@denes.com.mx</a></li>
+			  <li>Email Ventas de Huevo:<br><a href="mailto:ventashuevo@denes.com.mx">ventashuevo@denes.com.mx</a></li>
+			  <li>Email Compras:<br><a href="mailto:compras@denes.com.mx">compras@denes.com.mx</a></li>
+			  <li>Email Compras de Ganado:<br><a href="mailto:compras-ganado@denes.com.mx">compras-ganado@denes.com.mx</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- Termina el Contenido central -->	
+ 
+<!-- ################################################################################################ -->
+
+<!-- Footer -->
+<div class="wrapper row2">
+</div>
+
+<div class="wrapper row4">
+  <div id="copyright" class="clear">
+  <center>
+    <p class="chidito">
+		<a href="index.asp" style="color: #fc8b0b;">Inicio | </a>
+		<a href="Contacto.html" style="color: #fc8b0b;">Contáctanos | </a>
+		<a href="http://www.denes.com.mx" target="_blank" style="color: #fc8b0b;">Portal Denes | </a>
+		<a href="DirTel.asp" style="color: #fc8b0b;">Directorio Telefonico | </a>
+		<a href="" style="color: #fc8b0b;">Noticias</a>
+	</p><br><br>
+	<ul class="soc">
+    <li><a class="soc-facebook" href="https://www.facebook.com/DenesMexico"></a></li>
+    <li><a class="soc-skype" href="#"></a></li>
+    <li><a class="soc-email1" href="mailto:ventas@denes.com.mx"></a></li>
+    <li><a class="soc-google soc-icon-last" href="#"></a></li>
+	</ul>
+  </center> 
+  </div>
+</div>	
+
+<!-- ################################################################################################ -->
+
+<!-- Scripts -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
+<script>window.jQuery || document.write('<script src="layout/scripts/jquery-latest.min.js"><\/script>\
+<script src="layout/scripts/jquery-ui.min.js"><\/script>')</script>
+<script>jQuery(document).ready(function($){ $('img').removeAttr('width height'); });</script>
+<script src="layout/scripts/responsiveslides.js-v1.53/responsiveslides.min.js"></script>
+<script src="layout/scripts/jquery-mobilemenu.min.js"></script>
+<script src="layout/scripts/custom.js"></script>
+</body>
+</html>

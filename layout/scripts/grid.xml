@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<table>
+
+	<metadata>
+		<column name='Nombre' label='Nombre' datatype='string' editable='false'></column>
+		<column name='Area' label='Area' datatype='string' editable='false'></column>
+		<column name='Extension' label='Extension' datatype='integer' editable='false'></column>
+		<!-- <column name='freelance' label='FREELANCE' datatype='boolean' editable='true'></column> -->
+	</metadata>
+
+	<data>
+		<row id="1">
+			<column name="Nombre">CP Lidia Garcia</column>
+			<column name="Area">Contabilidad</column>
+			<column name="Extension">132</column>
+		</row>
+
+		<row id="2">
+			<column name="Nombre">Raul Zeferino</column>
+			<column name="Area">Credito y cobranza</column>
+			<column name="Extension">141</column>
+		</row>
+
+		<row id="3">
+			<column name="Nombre">Amalia Del Angel /Luis Alfaro</column>
+			<column name="Area">Contabilidad</column>
+			<column name="Extension">128</column>
+		</row>
+
+		<row id="4">
+			<column name="Nombre">Ana Sauceda</column>
+			<column name="Area">Credito y cobranza</column>
+			<column name="Extension">131</column>
+		</row>
+
+		<row id="6">
+			<column name="Nombre">Arturo Cano</column>
+			<column name="Area">Contabilidad</column>
+			<column name="Extension">129</column>
+		</row>
+
+		<row id="7">
+			<column name="Nombre">Brenda Vargas</column>
+			<column name="Area">Medico</column>
+			<column name="Extension">145</column>
+		</row>
+
+		<row id="8">
+			<column name="Nombre">Carlos Piñon</column>
+			<column name="Area">Ventas</column>
+			<column name="Extension">246</column>
+		</row>
+
+		<row id="9">
+			<column name="Nombre">Cutberto, Santos y Baldenegro</column>
+			<column name="Area">Embarques</column>
+			<column name="Extension">144</column>
+		</row>
+
+		<row id="10">
+			<column name="Nombre">Daniel Martinez</column>
+			<column name="Area">Embarques</column>
+			<column name="Extension">144</column>
+		</row>
+		
+		<row id="11">
+			<column name="Nombre">Elizabeth Marquez/Adrian Montalvo</column>
+			<column name="Area">Calidad</column>
+			<column name="Extension">142</column>
+		</row>
+		
+		<row id="12">
+			<column name="Nombre">Ericka Martinez</column>
+			<column name="Area">Ventas</column>
+			<column name="Extension">109</column>
+		</row>
+		
+		<row id="13">
+			<column name="Nombre">Gabriela Méndez</column>
+			<column name="Area">Recepcion</column>
+			<column name="Extension">101 y 102</column>
+		</row>
+		
+		<row id="14">
+			<column name="Nombre">Josue Ortiz / Victor Nieto</column>
+			<column name="Area">Sistemas</column>
+			<column name="Extension">156</column>
+		</row>
+		
+		<row id="15">
+			<column name="Nombre">Javier Colunga</column>
+			<column name="Area">Nóminas</column>
+			<column name="Extension">130</column>
+		</row>
+		
+		 <row id="16">
+			<column name="Nombre">Javier Gonzalez</column>
+			<column name="Area">Ventas</column>
+			<column name="Extension">108</column>
+		</row>
+		
+		<row id="17">
+			<column name="Nombre">Jorge Rosales</column>
+			<column name="Area">Proceso</column>
+			<column name="Extension">140</column>
+		</row>
+		
+		<row id="18">
+			<column name="Nombre">Jorge Urquieta</column>
+			<column name="Area">Costos</column>
+			<column name="Extension">149</column>
+		</row>
+		
+		<row id="19">
+			<column name="Nombre">Jorge Vega</column>
+			<column name="Area">Ventas</column>
+			<column name="Extension">105</column>
+		</row>
+		
+		<row id="20">
+			<column name="Nombre">Jose Luis Castillo</column>
+			<column name="Area"></column>
+			<column name="Extension">116</column>
+		</row>
+		
+		<row id="21">
+			<column name="Nombre">Juan A. De La Garza</column>
+			<column name="Area">Compras</column>
+			<column name="Extension">138</column>
+		</row>
+		
+		<row id="22">
+			<column name="Nombre">Juan Carlos Hdz</column>
+			<column name="Area">Cuentas por pagar</column>
+			<column name="Extension">147</column>
+		</row>
+		
+		<row id="23">
+			<column name="Nombre">Juan Ramirez</column>
+			<column name="Area">Pago a proveedor</column>
+			<column name="Extension">226</column>
+		</row>
+		
+		<row id="24">
+			<column name="Nombre">Juan Vazquez</column>
+			<column name="Area">Nómina</column>
+			<column name="Extension">130</column>
+		</row>
+		
+		<row id="25">
+			<column name="Nombre">Julian Villarreal</column>
+			<column name="Area">Contabilidad</column>
+			<column name="Extension">133</column>
+		</row>
+		
+		<row id="26">
+			<column name="Nombre">Karen Sanchez</column>
+			<column name="Area">Ventas</column>
+			<column name="Extension">106</column>
+		</row>
+		
+		<row id="27">
+			<column name="Nombre">Laura Cisneros </column>
+			<column name="Area">Compras</column>
+			<column name="Extension">114</column>
+		</row>
+		
+		<row id="28">
+			<column name="Nombre">Ruth Hernández/column>
+			<column name="Area">Tesoreria</column>
+			<column name="Extension">127</column>
+		</row>
+		
+		<row id="29">
+			<column name="Nombre">Mabel Beltrán / Moises Romero</column>
+			<column name="Area">Médico</column>
+			<column name="Extension">152</column>
+		</row>
+		
+		<row id="30">
+			<column name="Nombre">Margarita Lozoya</column>
+			<column name="Area">Tesoreria</column>
+			<column name="Extension">125</column>
+		</row>
+		
+		<row id="31">
+			<column name="Nombre">Mario Leyva/ Jorge Carreon</column>
+			<column name="Area">Sistemas</column>
+			<column name="Extension">155</column>
+		</row>
+		
+		<row id="32">
+			<column name="Nombre">Nancy Segura</column>
+			<column name="Area">Asis. CP Raul</column>
+			<column name="Extension">151</column>
+		</row>
+		
+		<row id="33">
+			<column name="Nombre">Marco A./ Luis</column>
+			<column name="Area">Facturacion</column>
+			<column name="Extension">143</column>
+		</row>
+		
+		<row id="34">
+			<column name="Nombre">Oscar Reyes</column>
+			<column name="Area">Nomina</column>
+			<column name="Extension">130</column>
+		</row>
+		
+		<row id="35">
+			<column name="Nombre">Patricia Valencia</column>
+			<column name="Area">Cuentas por pagar</column>
+			<column name="Extension">134</column>
+		</row>
+		
+		<row id="36">
+			<column name="Nombre">Pedro Garcia</column>
+			<column name="Area"></column>
+			<column name="Extension">104</column>
+		</row>
+		
+		<row id="37">
+			<column name="Nombre">Raúl Rodriguez</column>
+			<column name="Area">Recursos Humanos</column>
+			<column name="Extension">153</column>
+		</row>
+		
+		<row id="38">
+			<column name="Nombre">Ricardo Leal</column>
+			<column name="Area"></column>
+			<column name="Extension">111</column>
+		</row>
+		
+		<row id="39">
+			<column name="Nombre">Rodolfo Galvan</column>
+			<column name="Area">Costos</column>
+			<column name="Extension">115</column>
+		</row>
+		
+		<row id="40">
+			<column name="Nombre">Rodulfo Rojas</column>
+			<column name="Area">Medico</column>
+			<column name="Extension">139</column>
+		</row>
+		
+		<row id="41">
+			<column name="Nombre">Saul Salas/Octavio Iñigues</column>
+			<column name="Area">Sistemas</column>
+			<column name="Extension">154</column>
+		</row>
+		
+		<row id="42">
+			<column name="Nombre">Vanesa Cazares</column>
+			<column name="Area">Ventas</column>
+			<column name="Extension">150</column>
+		</row>
+		
+		<row id="43">
+			<column name="Nombre">Veronica Cardenas</column>
+			<column name="Area">Ventas</column>
+			<column name="Extension">107</column>
+		</row>
+		
+		<row id="44">
+			<column name="Nombre">Vigilancia</column>
+			<column name="Area">Vigilancia</column>
+			<column name="Extension">146</column>
+		</row> -->
+	</data>
+</table>

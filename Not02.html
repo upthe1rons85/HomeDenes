@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Denes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="images/DENES3.ico" />
+<link href="layout/styles/main.css" rel="stylesheet" type="text/css" media="all">
+<link href="layout/styles/mediaqueries.css" rel="stylesheet" type="text/css" media="all">
+<link type="text/css" rel="stylesheet" href="layout/styles/styles.css" />
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<script type='text/javascript' src='layout/scripts/menu_jquery.js'></script>
+<!--[if lt IE 9]>
+<link href="layout/styles/ie/ie8.css" rel="stylesheet" type="text/css" media="all">
+<script src="layout/scripts/ie/css3-mediaqueries.min.js"></script>
+<script src="layout/scripts/ie/html5shiv.min.js"></script>
+<![endif]-->
+<!-- Slider -->
+<link href="layout/scripts/responsiveslides.js-v1.53/responsiveslides.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css">
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h6 { 
+   position: absolute; 
+   top: -70px; 
+   left: 10px; 
+   width: 100%; 
+}
+h6 span{ 
+   color: white; 
+   font-family: "hand_testregular"; 
+   letter-spacing: -1px;  
+   padding: 10px; 
+}
+h6 span.spacer {
+   padding:0 5px; 
+}
+h5 { 
+   position: absolute; 
+   top: 10px; 
+   left: 10px; 
+   width: 100%; 
+}
+h5 span{ 
+   color: white; 
+   font-family: "hand_testregular"; 
+   letter-spacing: -1px;  
+   padding: 10px; 
+}
+h5 span.spacer1 {
+   padding:0 5px; 
+}
+</style>
+<script type="text/javascript" language="javascript">
+$(function() {
+    
+    $("h2")
+        .wrapInner("<span>")
+
+    $("h2 br")
+        .before("<span class='spacer'>")
+        .after("<span class='spacer'>");
+
+});
+</script>
+</head>
+<body>
+<!-- Encabezado, Correo, Fecha y Hora -->	
+		<div id="header-contact">
+		<table><td><center><span class="icon-envelope"></span> <a href="mailto:ventas@denes.com.mx">ventas@denes.com.mx</a></center></td>
+				<td><center><span class="icon-phone"></span><a href="#"> +81 83-332202</a></center></td>
+				<td><center><span class="icon-time"></span><a href="#"> <script type="text/javascript"> var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
+					var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"); 
+					var f=new Date(); 
+					document.write(diasSemana[f.getDay()] + " " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear()); 
+					</script></a></center></td>
+		</table>	
+		</div> 
+		
+<!-- ################################################################################################ -->
+
+<!-- Menu Principal -->
+<nav id="topnav">
+<div id='cssmenu'>
+<ul>
+	<li><img src="images/DenesMenu.png" /></li>
+   <li class='active'><a href='index.asp' style="font-size:12px; margin-left:130px;"><span>Inicio</span></a></li>
+   <li><a href='AcercaDe.html' style="font-size:11.5px;"><span>Quienes Somos</span></a></li>
+   <li><a href='Productos.html' style="font-size:11.5px; "><span>Productos</span></a></li>
+   <li><a href='Noticias.html' style="font-size:11.5px;"><span>Noticias</span></a></li>
+    <li><a href='Contacto.html' style="font-size:11.5px; "><span>Contacto</span></a></li>
+    <li class='has-sub' runat="server" id="SoloPersonal"><a href='#' style="font-size:11.5px;"><span>Servicios al Personal</span></a>
+      <ul>
+		  <li><a href='DirTel.asp'><span>Directorio Telefonico</span></a></li>
+		  <li><a href='Cumple.asp'><span>Compleaños del mes</span></a></li>
+		  <li><a href='Comedor.html'><span>Servicio de Comedor</span></a></li>
+		  <li class='has-sub'><a href='#'><span>Manuales de Sistemas</span></a>
+				<ul>
+				   <li><a href='ManualSysConta/ManualSysConta.html'><span>SysConta</span></a></li>
+				   <li><a href='ManualSysAlmacen/ManualSysAlmacen.html'><span>SysAlmacen</span></a></li>
+				   <li class='last'><a href='ManualSysComercial/ManualSysComercial.html'><span>SysComercial</span></a></li>
+				</ul>
+		  </li>
+		  <li class='last'><a href='http://servidor1/Compras/Logon.Asp' target="_blank"><span>Sistema de Compras</span></a></li>
+	  </ul>
+   </li>
+</ul>
+</div>
+</nav>
+		
+		
+<!-- Slider -->		
+		 <div class="rslides_container clear" style="position:absolute; z-index:2;">
+		 <center><img src="images/fondo.png" style="width:100%; height: 327px; left:-25px;" /></center>
+			 <div style="position:absolute; top:-24px; left:120px; z-index:3;">
+				<!-- <img src="images/Denes.png" style="position:absolute; left:-110px; top:24px;" /> -->
+				<ul class="rslides clear" id="rslides">
+					<li><img src="images/slice3.png" alt="" /></li>
+					<li><img src="images/slice4.png" alt="" /></li>
+					<li><img src="images/slice5.png" alt="" /></li>
+				</ul>
+			</div>	
+		</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>		
+
+<!-- ################################################################################################ -->
+
+<!-- Contenido -->
+<div class="wrapper row3">
+  <div id="container">
+    <!-- ################################################################################################ -->
+    <div id="sidebar_1" class="sidebar one_quarter first">
+      <aside>
+        <!-- ########################################################################################## -->
+         
+        <!-- /section -->
+         <section>
+          <article>
+         
+          </article>
+        </section> 
+        <!-- /section -->
+		
+        <!-- ########################################################################################## -->
+      </aside>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="one_half">
+      <section class="clear">
+        <center><h1>El Arte de Asar Carne</h1></center>
+        <figure class="imgr boxholder"><img src="images/Recetas/CarneAsada.jpg" alt=""></figure>
+        <p>En esta sección encontrarás consejos y recomendaciones para que seas un experto en el Arte de Asar Carne: </p>
+        <p><b>1) PLANEACIÓN:</b> Es necesario saber el número y tipo de personas que asistirán a tu parrillada, para poder calcular la cantidad de carne requerida para satisfacer a todos y evitar que sobre ó falte comida para tus invitados. Considera 250g para Mujeres, 350g para Hombres y 200g para Niños menores de 14 años.</p>
+        <figure class="imgl boxholder"><img src="images/Recetas/CarneAsada2.jpg" alt=""></figure>
+        <br><p><b>2) COMPLEMENTOS:</b> Tienes que considerar los complementos que vas a ofrecer a tus invitados, con el fin de crear una combinación balanceada y saludable. Nosotros recomendamos la siguiente lista de complementos:</p>
+		<br><ul>
+			<li><b>Combustible:</b> Carbón de Mezquite.</li>
+			<li><b>Arrancador de Flama:</b> Ocote y Alcohol Sólido.</li>
+			<li><b>Sazonador:</b> Sal Natural en Grano.</li>
+			<li><b>Bebidas:</b> Agua Natural, Agua de Sabor, Refrescos, Jugos, Té Helado, Vinos Tintos de Mesa y/o Cerveza.</li>
+			<li><b>Botanas:</b> Empanadas Estilo Argentino, Chistorra Española, Chorizo Argentino, Salchicha Estilo Alemana, Queso Provolone Natural ó Ahumado.</li>
+			<li><b>Verduras para Asar:</b> Cebollitas Cambray, Nopales, Pimientos, Chiles, Papas, Etc...</li>
+			<li><b>Verduras para Acompañar:</b> Lechuga, Jitomate, Esparragos, Espinacas, Zanahorias, Brocoli, Coliflor, Champiñones, Etc...</li>
+			<li><b>Guarniciones:</b> Tortillas, Arroz, Frijoles y/o Pasta.</li>
+			<li><b>Salsas:</b> Picante de Habanero, Chile de Árbol y/o Chimichurri Estilo Argentino.</li>
+		</ul>
+		<br><p><b>3) CORTES FINOS:</b> Sólo en Denes</p>
+		<br><p><b>4) CONSEJOS PARA DESCONGELAR: </b></p>
+		 <figure class="imgl boxholder"><img src="images/Recetas/Desconge.png" alt=""></figure>
+		 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		 <p><b>5) PROCESO DE ASADO:</b> A continuación te damos unas recomendaciones para que tu Parrillada sea un Éxito:</p>
+		 <ul>
+			<li>Considerar por lo menos 30min para la preparación del carbón en el asador, desde que se enciende hasta que alcanza la temperatura óptima, para poder asar la carne sin quemarla.</li>
+			<li>Mantener los cortes a temperatura ambiente 20min antes, de esta manera usted ahorrará tiempo y combustible durante el asado.</li>
+			<li>Curar la parrilla, colocando en un trinche 1/4 de cebolla cruda untada con aceite, con el fin limpiarla y evitar que se pegue la carne. Considerar que la Parrilla debe de ir colocada por lo menos a 10cm de la Brasa.</li>
+			<li>Colocar el carbón en forma de “iglú” ó “pirámide” e insertar las varitas de ocote natural a manera de mecha. El ocote natural debe de encender y hará arder al carbón.</li>
+			<li>Marinar los cortes naturales, agregando Sal de Grano al gusto entre 10min y 20min antes de asarlos. De esta manera la Sal de Grano va a penetrar en los tejidos, ayudando a que la carne no se desjugue y conserve su sabor natural. </li>
+			<li>Esperar hasta que todo el Carbón arda y se vea al rojo vivo. Conforme se vaya agotando, se pueden ir añadiendo algunos pedazos medianos y a su vez se puede esparcir.</li>
+			<li>Colocar los cortes sobre la parrilla caliente por la brasa, espere para voltearlos en el momento que suelten su jugo. Aguarde el tiempo necesario para darle a su carne el término deseado y retírela del fuego. Entre menos maneje, mueva o presione la carne es mejor, ya que así retendrá más su jugo.</li>
+		 </ul>
+		 <br><p><b>6) TÉRMINOS DE ASADO:</b> Es indispensable que de acuerdo al tipo de carne y de su gusto, brinde a la carne el tiempo de asado necesario para satisfacer a sus invitados. El tiempo de asado varía con la temperatura y con el grosor de su corte. Se recomienda hacer pruebas previas, para poder definir la eficiencia de su asador.</p>
+<p>Los términos de cocción en base a la temperatura de la carne son:</p>
+<figure class="imgl boxholder"><img src="images/Recetas/Terminos.png" valign="right"></figure>
+			<ul>
+				<br><br><br><li><b>Rojo (55°C):</b>  También conocido como Inglés. Corte sellado por ambos lados a fuego alto. La capa externa es bien cocida y el centro crudo y frío.</li>
+				<br><br><li><b>Medio (60°C):</b> También conocido como Rojo Medio. La capa externa de la carne es sellada en la parrilla dejando el centro de color rojo o casi crudo y café claro a las orillas.</li>
+				<br><br><li><b>En su Punto (65°C):</b> También conocido como Medio. Es el término ideal para consumir la carne, para apreciar todo su sabor y jugosidad. Es sellado a la parrilla, dejando un leve centro rojo - rosado.</li>
+				<br><br><li><b>Tres Cuartos (70°C):</b>  La carne comienza a perder jugosidad y con ella el sabor. El centro del corte se torna color café claro con las orilla perfectamente cocidas.</li>
+				<br><br><li><b>Bien Cocido (75°C):</b> Es el término menos recomendado ya que la carne pierde hasta un 70% de su jugosidad, quedando dura y seca aun cuando el corte sea de calidad. Todo el corte se torna de color café-gris, prácticamente queda sin jugo y pierde su suavidad.</li>
+			</ul>
+			<br><br><p>Una vez asada la carne al termino deseado, se recomienda dejar reposar de 2min a 3min antes de comer, para que los jugos se distribuyan de manera uniforme en el corte.</p>
+			<br><p>Esperamos que estos consejos le sean de utilidad, para que puedan disfrutar en compañía de sus seres queridos.</p>
+	  </section>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<div class="wrapper row2">
+</div>
+
+<div class="wrapper row4">
+  <div id="copyright" class="clear">
+  <center>
+    <p class="chidito">
+		<a href="index.asp" style="color: #fc8b0b;">Inicio | </a>
+		<a href="Contacto.html" style="color: #fc8b0b;">Contáctanos | </a>
+		<a href="http://www.denes.com.mx" target="_blank" style="color: #fc8b0b;">Portal Denes | </a>
+		<a href="DirTel.asp" style="color: #fc8b0b;">Directorio Telefonico | </a>
+		<a href="" style="color: #fc8b0b;">Noticias</a>
+	</p><br><br>
+	<ul class="soc">
+    <li><a class="soc-facebook" href="https://www.facebook.com/DenesMexico"></a></li>
+    <li><a class="soc-skype" href="#"></a></li>
+    <li><a class="soc-email1" href="mailto:ventas@denes.com.mx"></a></li>
+    <li><a class="soc-google soc-icon-last" href="#"></a></li>
+	</ul>
+  </center> 
+  </div>
+</div>	
+
+<!-- Scripts -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
+<script>window.jQuery || document.write('<script src="layout/scripts/jquery-latest.min.js"><\/script>\
+<script src="layout/scripts/jquery-ui.min.js"><\/script>')</script>
+<script>jQuery(document).ready(function($){ $('img').removeAttr('width height'); });</script>
+<script src="layout/scripts/responsiveslides.js-v1.53/responsiveslides.min.js"></script>
+<script src="layout/scripts/jquery-mobilemenu.min.js"></script>
+<script src="layout/scripts/custom.js"></script>
+</body>
+</html>
